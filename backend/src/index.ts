@@ -18,9 +18,9 @@ app.use((req, _res, next) => {
   console.log('[hub-api] ' + req.method + ' ' + req.url);
   next();
 });
-app.use('/assets', express.static(path.join(projectRoot, 'assets'), { maxAge: 0 }));
+app.use('/assets', express.static(path.join(projectRoot, 'assets')));
 app.use((_req, res, next) => {
-  res.setHeader('Cache-Control', 'no-store');
+  res.setHeader('Cache-Control', 'public, max-age=60');
   next();
 });
 

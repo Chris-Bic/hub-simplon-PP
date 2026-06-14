@@ -39,6 +39,26 @@ Remplacer chaque champ entre crochets par votre contenu.
 - Critere de reussite: La carte ne se charge plus au premier affichage de la page. Déclenchement uniquement au scroll ou au clic
 - Niveau de priorite: Moyenne
 
+## User story 4 - Cache serveur
+
+- Contexte : En tant que visiteur de l'annuaire Solydari, je veux que les pages se chargent instantanément, afin de ne pas attendre que le serveur recalcule une page dont le contenu n'a pas changé.
+- Objectif : Réduire le nombre de requêtes de 230 à moins de 60
+- Bonne pratique : Activer le cache serveur pour servir des pages statiques pré-générées (RGESN 7.1)
+- KPI : Nombre de requêtes mesuré via EcoIndex avant/après activation
+Repo ou écran concerné : Configuration LiteSpeed Cache, toutes les pages publiques du site
+- Critère de réussite : EcoIndex passe d'une note F à une note D minimum
+- Priorité : Haute
+
+## User story 5 - Suppression doublons Analytics et cloisonnement JS
+
+- Contexte : En tant que visiteur non connecté parcourant l'annuaire, je veux que la page ne charge pas de scripts inutiles à mon profil, afin de ne pas consommer de données pour des ressources qui ne me concernent pas.
+- Objectif : Supprimer les 743 Ko de JavaScript inutilisé identifiés par PageSpeed Insights
+- Bonne pratique : Supprimer les ressources dupliquées ou non utilisées selon le profil utilisateur (RGESN 6.5)
+- KPI : Volume de JS inutilisé mesuré via PageSpeed avant/après
+- Repo ou écran concerné : Toutes les pages publiques — scripts Analytics et plugin de gestion des transactions
+- Critère de réussite : PageSpeed ne signale plus de doublon Analytics. Le plugin de transactions (Bulma + Tabulator) ne se charge plus sur les pages visiteurs non connectés
+- Priorité : Haute
+
 ## Notes
 
 - Vous pouvez ajouter d autres user stories si necessaire.
