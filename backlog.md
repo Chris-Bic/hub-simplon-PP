@@ -62,4 +62,4 @@ Repo ou écran concerné : Configuration LiteSpeed Cache, toutes les pages publi
 ## Notes
 
 - Vous pouvez ajouter d autres user stories si necessaire.
-- Le niveau de detail attendu doit permettre une priorisation exploitable.
+- Le niveau de detail attendu doit permettre une priorisation exploitable. .
